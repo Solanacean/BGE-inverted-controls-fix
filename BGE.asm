@@ -135,9 +135,9 @@ pathway_spaceship_beluga:  ; Spaceship Beluga
 ;    push    424360h        ; Push return address (the original address of the function being hooked) onto the stack
 
 main_body:
-    push    ecx            ; ECX is required by the original function so we must preserve it
+    push    ecx            ; ECX is required by the original function so it must be preserved
     push    edx            ; The same goes for EDX
-    push    eax            ; Reserve space on stack for a local variable
+    push    eax            ; Reserve space on the stack for a local variable
     mov     ecx, 71003FF9h
     call    sub_4A4FD0    
     push    1DE8h
