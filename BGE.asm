@@ -112,27 +112,27 @@ patchat 003DCDEBh ; jnz -> nop
 patchat 00736C9Fh
 
 pathway_walking_running:   ; Walking/running
-    push    423220h        ; Push the return address (the original address of the function being hooked) to the stack 
+    push    423220h        ; Push return address (the original address of the function being hooked) onto the stack 
     jmp     main_body
     
 ;pathway_picture_camera:    ; Jade's photographic camera (we don't want to touch that)
-;    push    4235B0h        ; Push the return address (the original address of the function being hooked) to the stack 
+;    push    4235B0h        ; Push return address (the original address of the function being hooked) onto the stack 
 ;    jmp     main_body
 
 ;pathway_menu:              ; Menu (we don't want to touch that)
-;    push    423EF0h        ; Push the return address (the original address of the function being hooked) to the stack 
+;    push    423EF0h        ; Push return address (the original address of the function being hooked) onto the stack 
 ;    jmp     main_body
 
 pathway_boat:              ; Boat
-    push    423850h        ; Push the return address (the original address of the function being hooked) to the stack 
+    push    423850h        ; Push return address (the original address of the function being hooked) onto the stack 
     jmp     main_body
 
 pathway_spaceship_beluga:  ; Spaceship Beluga
-    push    423C60h        ; Push the return address (the original address of the function being hooked) to the stack
+    push    423C60h        ; Push return address (the original address of the function being hooked) onto the stack
     jmp     main_body
     
 ;pathway_unknown:           ; *** Unknown, further investigation is required ***
-;    push    424360h        ; Push the return address (the original address of the function being hooked) to the stack
+;    push    424360h        ; Push return address (the original address of the function being hooked) onto the stack
 
 main_body:
     push    ecx            ; ECX is required by the original function so we must preserve it
